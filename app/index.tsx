@@ -46,7 +46,7 @@ export default function Login() {
                     />
                 </View>
 
-                <Pressable style={styles.button}>
+                <Pressable style={styles.button} onPress={handleSignIn}>
                     <Text style={styles.buttonText}>Entrar</Text>
                 </Pressable>
 
