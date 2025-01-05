@@ -17,11 +17,11 @@ export default function Profile() {
 
     return (
         <View style={styles.container}>
-            <Text>Página Perfil</Text>
+            <Text style={styles.text}>Página Perfil</Text>
 
-            <Button
+            <Button                
                 title='Sair'
-                onPress={handleSignout}
+                onPress={handleSignout}                
             />
         </View>
     );
@@ -33,5 +33,8 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    text: {
+        marginBottom: 16,
     }
 })
