@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import colors from '@/constants/colors';
-import { View, Text, StyleSheet, TextInput, Pressable, Alert } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Pressable, Alert, Button, TouchableOpacity } from 'react-native';
 import { Link, router } from 'expo-router';
 import { supabase } from '@/app/lib/supabase';
 
@@ -28,6 +28,10 @@ export default function Login() {
         router.replace('/(panel)/profile/page');
     }
 
+    async function handleResetPassword(){
+        Alert.alert('Error', 'Serviço temporariamente indisponivel, tente novamente mais tarde !')
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -35,7 +39,7 @@ export default function Login() {
                     Dev <Text style={{ color: colors.green }}> Auth</Text>
                 </Text>
                 <Text style={styles.slogan}>
-                    O futuro começa agora !
+                    O seu app de autenticação com Supabase !
                 </Text>
             </View>
 
@@ -69,7 +73,11 @@ export default function Login() {
 
                 <Link href="/(auth)/signup/page" style={styles.link}>
                     <Text>Ainda não possui uma conta? Cadastra-se</Text>
-                </Link>
+                </Link>               
+
+                <TouchableOpacity onPress={handleResetPassword}>
+                    <Text style={styles.link}>Esqueci minha senha</Text>
+                </TouchableOpacity>
 
             </View>
         </View>
@@ -138,5 +146,6 @@ const styles = StyleSheet.create({
         marginTop: 16,
         textAlign: 'center',
         fontWeight: 'bold',
-    }
+    },
+    
 })

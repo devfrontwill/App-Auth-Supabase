@@ -85,7 +85,7 @@ export default function Signup() {
                             </Text>
                         </Pressable>
 
-                        <Link href="/" style={styles.link}>
+                        <Link href="/(auth)/signin/page" style={styles.link}>
                             <Text>Já possui uma conta? Entrar </Text>
                         </Link>
 
