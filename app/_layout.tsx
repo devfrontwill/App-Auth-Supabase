@@ -23,7 +23,7 @@ function MainLayout() {
       }
 
       setAuth(null);
-      router.replace("/");
+      router.replace("/(auth)/signin/page");
     })
   }, [])
 
@@ -36,6 +36,10 @@ function MainLayout() {
 
       <Stack.Screen
         name="(auth)/signup/page"
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="(auth)/signin/page"
         options={{ headerShown: false }}
       />
 
