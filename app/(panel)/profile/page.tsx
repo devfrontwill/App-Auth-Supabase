@@ -13,6 +13,10 @@ export default function Profile() {
         if(error){
             Alert.alert('Error', 'Erro ao tentar sair da conta, tente novamente mais tarde.')
             return;
+
+        }else if(!error){
+            Alert.alert('Success', 'Usuário deslogado com sucesso !');
+            return;
         }
     }
 

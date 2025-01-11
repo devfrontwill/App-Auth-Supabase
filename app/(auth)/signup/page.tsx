@@ -28,7 +28,15 @@ export default function Signup() {
         if(error){
             Alert.alert('Error', error.message);
             return;
-        }        
+
+        }else if(!error){
+            Alert.alert('Success', 'Conta criada com sucesso, por favor confirme seu email !');
+            setLoading(false);
+            setName('');
+            setEmail('');
+            setPassword('');
+            return;
+        }
         
         setLoading(false);
         router.replace('/(auth)/signin/page');

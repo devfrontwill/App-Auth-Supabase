@@ -22,15 +22,16 @@ export default function Login() {
             Alert.alert('Error', error.message)
             setLoading(false);
             return;
-        }        
+
+        }else if(!error){
+            Alert.alert('Success', 'Usuário logado com sucesso !')
+            setLoading(false);
+            return;
+        }     
 
         setLoading(false);
         router.replace('/(panel)/profile/page');
-    }
-
-    async function handleResetPassword(){
-        Alert.alert('Error', 'Serviço temporariamente indisponivel, tente novamente mais tarde !')
-    }
+    }   
 
     return (
         <View style={styles.container}>
@@ -73,11 +74,7 @@ export default function Login() {
 
                 <Link href="/(auth)/signup/page" style={styles.link}>
                     <Text>Ainda não possui uma conta? Cadastra-se</Text>
-                </Link>               
-
-                <TouchableOpacity onPress={handleResetPassword}>
-                    <Text style={styles.link}>Esqueci minha senha</Text>
-                </TouchableOpacity>
+                </Link>              
 
             </View>
         </View>
