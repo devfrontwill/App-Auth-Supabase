@@ -36,4 +36,5 @@ yarn-error.*
 *.tsbuildinfo
 
 #supabase
+constants/
 supabase.ts
