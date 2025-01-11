@@ -35,6 +35,5 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
-#supabase
+#constants
 constants/
-supabase.ts
