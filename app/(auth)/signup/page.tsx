@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import colors from '@/constants/colors';
+import colors from '@/.constants/colors';
 import { View, Text, StyleSheet, TextInput, Pressable, SafeAreaView, ScrollView, Alert } from 'react-native';
 import { Link, router } from 'expo-router';
 import { supabase } from '@/app/lib/supabase';

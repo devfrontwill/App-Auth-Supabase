@@ -1,6 +1,6 @@
 import { useAuth } from '@/app/context/AuthContext';
 import { supabase } from '@/app/lib/supabase';
-import colors from '@/constants/colors';
+import colors from '@/.constants/colors';
 import { View, Text, StyleSheet, Button, Alert } from 'react-native';
 
 export default function Profile() {
